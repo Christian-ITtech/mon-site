@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mon site Node.js avec Express et HTML/CSS">
+    <title>Mon Site Node.js</title>
+    <!-- Styles simples intégrés -->
+    <style>
+        /* Reset de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0077cc;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005fa3;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #004080;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #0077cc;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Bouton simple */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0077cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bienvenue sur mon site Node.js</h1>
+        <p>Exemple de page HTML bien structurée</p>
+    </header>
+
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>À propos</h2>
+            <p>Bienvenue sur mon site web créé avec Node.js et Express. Cette page est un exemple de structure HTML complète, avec header, navigation, sections et footer.</p>
+        </section>
+
+        <section id="services">
+            <h2>Services</h2>
+            <ul>
+                <li>Développement web front-end</li>
+                <li>Applications Node.js back-end</li>
+                <li>Intégration de bases de données</li>
+                <li>Déploiement et hébergement</li>
+            </ul>
+            <a href="#contact" class="btn">Contactez-moi</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="#" method="post">
+                <label for="name">Nom :</label><br>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required><br><br>
+
+                <label for="email">Email :</label><br>
+                <input type="email" id="email" name="email" placeholder="Votre email" required><br><br>
+
+                <label for="message">Message :</label><br>
+                <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea><br><br>
+
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Christian Gram. Tous droits réservés.
+    </footer>
+
+</body>
+</html>

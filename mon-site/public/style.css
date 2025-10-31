@@ -1,0 +1,35 @@
+body {
+    font-family: , 'Times New Roman', Times, serif-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    padding: -top: 50px;
+}
+h1 {
+    color: #007acc;
+}
+p {
+    font-size: 20px;
+    list-style: type: square;
+}
+nav {
+    margin-top: 400px;
+    marigin-bottom: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: blueviolet
+    margin: 0 10px;
+    font-weight: button;
+}
+nav a:hover {
+    color: #005f99;
+}
+img {
+    display: block;
+    margin: 20px auto;
+    float: center;
+    width: 300px;
+    height: auto;
+
+}

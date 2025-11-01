@@ -1,3 +1,20 @@
-body {
-  background-color: black;
+/* changes the background color of the body element*/
+body { 
+  background-color:rgb(111, 110, 114);
+}
+/* changes the background color of the element with the id "welcome" */
+#welcome {
+  background-color: yellow;
+}
+/* selecting the h1 element based on its class name "Gram" */
+h1.Gram {
+  color:white; background-color:red;
+}
+/* universal selector that applies to all elements */
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+}
+/*grouping selectors to apply the same style to multiple elements*/
+h1, h1 {
+  text-align: center;
 }

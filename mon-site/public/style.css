@@ -1,203 +1,138 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mon site Node.js avec style professionnel">
-  <title>Mon Site Professionnel</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* Variables de couleur */
-    :root {
-      --primary: #2c3e50;
-      --secondary: #3498db;
-      --accent: #e74c3c;
-      --bg: #f9f9f9;
-      --text: #333;
-      --light-text: #666;
-    }
+root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --accent: #e74c3c;
+  --bg: #f9f9f9;
+  --text: #333;
+  --light-text: #666;
+}
 
-    /* Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    header {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-    }
+header {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
 
-    header p {
-      font-size: 1.2rem;
-      color: #ecf0f1;
-    }
+header p {
+  font-size: 1.2rem;
+  color: #ecf0f1;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: var(--secondary);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-    nav a {
-      color: #fff;
-      padding: 15px 25px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s, color 0.3s;
-    }
+nav a {
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
 
-    nav a:hover {
-      background-color: var(--accent);
-      color: #fff;
-    }
+nav a:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
 
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-    section {
-      margin-bottom: 60px;
-    }
+section {
+  margin-bottom: 60px;
+}
 
-    section h2 {
-      color: var(--primary);
-      font-size: 2rem;
-      margin-bottom: 20px;
-      border-bottom: 2px solid var(--secondary);
-      display: inline-block;
-      padding-bottom: 5px;
-    }
+section h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--secondary);
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
-    section p, section li {
-      font-size: 1rem;
-      color: var(--light-text);
-    }
+section p, section li {
+  font-size: 1rem;
+  color: var(--light-text);
+}
 
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 20px;
-    }
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background-color: var(--secondary);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      border-radius: 5px;
-      transition: background 0.3s, transform 0.2s;
-    }
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: var(--secondary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
 
-    .btn:hover {
-      background-color: var(--accent);
-      transform: translateY(-2px);
-    }
+.btn:hover {
+  background-color: var(--accent);
+  transform: translateY(-2px);
+}
 
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 8px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-    }
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
 
-    form button {
-      margin-top: 10px;
-      cursor: pointer;
-    }
+form button {
+  margin-top: 10px;
+  cursor: pointer;
+}
 
-    footer {
-      background-color: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 25px 20px;
-      font-size: 0.9rem;
-    }
+footer {
+  background-color: var(--primary);
+  color: #fff;
+  text-align: center;
+  padding: 25px 20px;
+  font-size: 0.9rem;
+}
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
 
-      section h2 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Mon Site Professionnel</h1>
-  <p>Exemple de site moderne et responsive avec Node.js</p>
-</header>
-
-<nav>
-  <a href="#about">À propos</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<main>
-  <section id="about">
-    <h2>À propos</h2>
-    <p>Bienvenue sur mon site web développé avec Node.js et Express. Ce site utilise un design moderne, épuré et responsive, parfait pour une vitrine professionnelle.</p>
-  </section>
-
-  <section id="services">
-    <h2>Services</h2>
-    <ul>
-      <li>Développement web front-end</li>
-      <li>Applications Node.js back-end</li>
-      <li>Intégration de bases de données</li>
-      <li>Déploiement et hébergement sur Render</li>
-    </ul>
-    <a href="#contact" class="btn">Contactez-moi</a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="#" method="post">
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" placeholder="Votre nom" required>
-
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" placeholder="Votre email" required>
-
-      <label for="message">Message :</label>
-      <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
-
-      <button type="submit" class="btn">Envoyer</button>
-    </form>
-  </section>
-</main>
-
-<footer>
-  &copy; 2025 Christian Gram. Tous droits réservés.
-</footer>
-
-</body>
-</html>
+  section h2 {
+    font-size: 1.5rem;
+  }
+}

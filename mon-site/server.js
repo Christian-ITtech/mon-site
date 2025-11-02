@@ -1,4 +1,5 @@
 const express = require("express");
+const pool = require(''./db'); // importe la connexion à la base de données PostgreSQL
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const path = require("path");
@@ -14,7 +15,7 @@ app.use(session({
 }));
 
 // Servir le dossier public
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.json());
 
 // Page d'accueil / login
 app.get("/", (req, res) => {
@@ -47,3 +48,19 @@ app.get("/logout", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
+// Exemple : ajouter un utilisateur
+app.post('/users', async (req, res) => {
+  const { username, email, password_hash } = req.body;
+  try {
+    const result = await pool.query(
+      'INSERT INTO users (username, email, password_hash) VALUES ($1, $2, $3) RETURNING *',
+      [username, email, password_hash]
+    );
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erreur serveur');
+  }
+});
+
+app.listen(10000, () => console.log('Serveur lancé sur http://localhost:10000'));

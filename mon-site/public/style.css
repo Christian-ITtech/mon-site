@@ -15,3 +15,14 @@ td {
 tr:hover {
     background-color: antiquewhite;
 }
+#welcome {
+    text-align: center;
+}
+#intro {
+    text-size: 30px;
+}
+p {
+
+ font-size: 30px;
+ font-size-adjust: var(#intro);
+}

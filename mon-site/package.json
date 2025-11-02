@@ -4,17 +4,13 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Christian Gram",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "body-parser": "^2.2.0",
-    "express": "^5.1.0",
-    "express-session": "^1.18.2",
-    "pg": "^8.16.3"
+    "express": "^5.1.0"
   }
 }

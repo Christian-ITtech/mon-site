@@ -1,57 +1,76 @@
-.welcome {
-background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_gLemrEDUCU5fAtR4BT1O--IGkzJ3MiY_Q0n89tpeukXjADJaCO2qFoe19-vFgl3xqys&s');
-color: white;
-text-align: center;
+* {
+box-sizing: border-box;
+font-family: 'Times New Roman', Times, serif;
 }
-table, th, td {
-    border: 2px solid black;
-    width: 50%;
-    border-collapse: collapse;
+body {
+    background-color: #131720;
+    font-family: sans-serif;
+}
+h3 {
+    color: white; 
+}
+.topnav {
+    overflow: hidden;
+    background-color: #131720;
     padding: 10px;
 }
-td {
-    text-align: center;
-}
-tr:hover {
-    background-color: antiquewhite;
-}
-#welcome {
-    text-align: center;
-}
-#intro {
-    text-size: 30px;
-}
-p {
-
- font-size: 30px;
- font-size-adjust: var(#intro);
-}
-
-.dropdownbutton {
-    background-color: blue;
+.topnav a {
+    float: left;
+    display: block;
     color: white;
-    padding: 16px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
-.dropdown-menu {
-   display: none;
-   position: absolute;
-   background-color: lightblue;
-   min-width: 146px;
+.topnav .search-container {
+    float: right;
 }
-.dropdown-menu a {
-    color: black;
-    display: block;
+form {
+    background-color: #151f30;
+    width: 300px;
+    height: 43px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
 }
-.dropdown-menu a:hover {
-    background-color: white;
+#query {
+ height: 42px;
+}
+input {
+    all: unset;
+    font: 15px system ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px;
 
 }
-.dropdown:hover .dropdown-menu {
-    display: block;
+.thumbnail {
+    height: 300px;
+    width: 250px;
+    border-radius: 19px;
 }
-.dropdown:hover .dropdownbutton {
-    background-color: grey;
+.column {
+    float: left;
+    width: 23%;
+    padding: 10px 10px;
+
+}
+.card {
+ border-radius: 27px;
+ padding: 8px;
+ text-align: center;
+ background-color: #151f30;
+}
+
+h3 {
+font-family: 'Times New Roman', Times, serif;
+font-size: 20px;
+}
+.material-icons {
+    float: right;
+    padding-top: 20px;
+    color: white;
 }

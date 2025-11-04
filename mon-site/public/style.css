@@ -56,6 +56,7 @@ input {
     float: left;
     width: 23%;
     padding: 10px 10px;
+    background-attachment: fixed;
 
 }
 .card {
@@ -63,6 +64,7 @@ input {
  padding: 8px;
  text-align: center;
  background-color: #151f30;
+ background-attachment: fixed;
 }
 
 h3 {
@@ -71,6 +73,6 @@ font-size: 20px;
 }
 .material-icons {
     float: right;
-    padding-top: 20px;
+    padding-top: 20px;  
     color: white;
 }

@@ -1,7 +1,6 @@
 * {
 box-sizing: border-box;
 font-family: 'Times New Roman', Times, serif;
-}
 body {
     background-color: #131720;
     font-family: sans-serif;
@@ -48,31 +47,33 @@ input {
 
 }
 .thumbnail {
-  width: 100%;
-  height: 220px;         /* fixe la hauteur pour éviter les sauts */
-  object-fit: cover;     /* rogne l’image si elle dépasse */
+     width: 100%;
+  height: auto;
+  object-fit: cover;
   border-radius: 0.8rem;
-  display: block;
-    
-  }
+}
+  
 .column {
     float: left;
-    width: 23%;
+    width: 50%;
     padding: 10px 10px;
 
 }
 .card {
-  background: #0e1625;
+  background-color:  #151f30;
   border-radius: 1rem;
   text-align: center;
   padding: 0.5rem;
-  color: white;
+  color:  #151f30;
+  width: 100%;
+  height: 100%;
+  
 }
 
 
 h3 {
 font-family: 'Times New Roman', Times, serif;
-font-size: 20px;
+font-size: 23px;
 }
 .material-icons {
     float: right;

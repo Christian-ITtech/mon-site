@@ -10,7 +10,7 @@ app.use(express.json());
 
 // Exemple de route API (facultatif)
 app.get('/api', (req, res) => {
-  res.json({ message: 'Bienvenue sur ton API Node.js' });
+  res.json({ message: 'Bienvenue sur ton API Node.js'});
 });
 
 // Démarrage du serveur
